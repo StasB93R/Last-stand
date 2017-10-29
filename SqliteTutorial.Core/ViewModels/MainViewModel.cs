@@ -14,10 +14,19 @@ namespace SqliteTutorial.Core.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly MyDatabase db;
+        //to get to database
+        private readonly MyDatabase _connect_db;
 
+        //declaring everything for submitting item to DB
         private string title;
+        private int price;
+        private string location;
+        private bool mine;
+        private string category;
 
+        //establishing getters and setters for information we are going to recieve
+
+        //the first one is the title of the item
         public string Title
         {
             get { return title; }
@@ -27,51 +36,81 @@ namespace SqliteTutorial.Core.ViewModels
                 OnPropertyChanged();
             }
         }
-        private string details;
 
-        public string Details
+        //Declaring for the price
+        public int Price
         {
-            get { return details; }
+            get { return price; }
             set
             {
-                details = value;
+                price = value;
                 OnPropertyChanged();
             }
         }
 
-        private bool complete;
-
-        public bool Complete
+        //Declaring location
+        public string Location
         {
-            get { return complete; }
+            get { return location; }
             set
             {
-                complete = value;
+                location = value;
                 OnPropertyChanged();
             }
         }
+        //this will be used when we add items to the users list
+        public bool Mine
+        {
+            get { return mine; }
+            set
+            {
+                mine = value;
+                OnPropertyChanged();
+            }
+        }
+
+        //For category of the item
+
+        public string Category
+        {
+            get { return category; }
+            set
+            {
+                category = value;
+                OnPropertyChanged();
+            }
+        }
+
+        //This is used when submitting the to DB
         public ICommand SubmitCommand { protected set; get; }
+
         public ICommand SecondPageCommand { protected set; get; }
+
         public MainViewModel()
         {
-            db = new MyDatabase();
+            _connect_db = new MyDatabase();
             SubmitCommand = new Command(Submit);
             SecondPageCommand = new Command(() =>
             {
             });
         }
-
+   
         public void Submit()
         {
-            db.Insert(new ToDoItem()
+            _connect_db.Insert(new ShopItems()
             {
                 Title = this.Title,
-                Details = Details,
-                Complete = Complete
+                Price = this.Price,
+                Location = this.Location,
+                Mine = this.Mine,
+                Category = this.Category
             });
             Title = String.Empty;
-            Details = String.Empty;
-            Complete = false;
+           
         }
     }
 }
+//var nameValue = productName.Text;
+//var priceValue = productPrice.Text;
+//var categoryValue = productCategory.Text;
+//var locationValue = productLocation.Text;

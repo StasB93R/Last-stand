@@ -4,23 +4,23 @@
     <StackLayout VerticalOptions ="Start" Spacing ="10" Padding="25, 50, 25, 25">
     <StackLayout Orientation="Horizontal">
         <Label Text="Name:"/>
-        <Entry x:Name = "productName" Placeholder="Product name..." HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name = "productName"  Text="{Binding Title}" Placeholder="Product name..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
         <Label Text = "Price"/>
-        <Entry x:Name = "productPrice" Placeholder="Price..." HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name = "productPrice"   Text="{Binding Price}" Placeholder="Price..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
 
         <StackLayout Orientation="Horizontal">
          <Label Text = "Location"/>
-        <Entry x:Name = "productLocation" Placeholder="Location..." HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name = "productLocation" Text="{Binding Location}" Placeholder="Location..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
          <Label Text = "Category"/>
-        <Entry x:Name = "productCategory" Placeholder="Category..." HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name = "productCategory" Text="{Binding Category}" Placeholder="Category..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
 
@@ -31,7 +31,7 @@
         </StackLayout>
 
         <StackLayout VerticalOptions = "Center" HorizontalOptions = "Center" Padding="0,50,0,0"> 
-        <Button Text="Upload item" Clicked="uploadItem" BorderColor="Aqua" />
+        <Button Text="Upload item" x:Name="SubmitButton" AutomationId="SubmitButton" Clicked="uploadItem" Command="{Binding SubmitCommand}" BorderColor="Aqua" />
         </StackLayout>
 
 

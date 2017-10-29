@@ -15,6 +15,7 @@ namespace SqliteTutorial
         public MyList()
         {
             InitializeComponent();
+            BindingContext = new SecondViewModel();
         }
 
         protected override void OnAppearing()

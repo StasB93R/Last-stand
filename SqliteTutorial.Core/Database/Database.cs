@@ -18,46 +18,46 @@ namespace SqliteTutorial.Core.Database
         public MyDatabase()
         {
             database = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(), 
-                DependencyService.Get<IFileHelper>().GetLocalPath("ToDoSqlite.db3"));
-            database.CreateTable<ToDoItem>();
+                DependencyService.Get<IFileHelper>().GetLocalPath("ShopItemsDB.db3"));
+            database.CreateTable<ShopItems>();
         }
 
-        public int Insert(ToDoItem toDoItem)
+        public int Insert(ShopItems shopItem)
         {
-            var item = database.Insert(toDoItem);
+            var item = database.Insert(shopItem);
             database.Commit();
             return item;
 
         }
 
-        public int InsertOrUpdate(ToDoItem toDoItem)
+        public int InsertOrUpdate(ShopItems shopItem)
         {
             int num;
-            if (database.Table<ToDoItem>().Any(x=> x.Id == toDoItem.Id))
+            if (database.Table<ShopItems>().Any(x=> x.Id == shopItem.Id))
             {
-                num = database.Update(toDoItem);
+                num = database.Update(shopItem);
             }
-            num = database.Insert(toDoItem);
+            num = database.Insert(shopItem);
             database.Commit();
             return num;
         }
 
-        public int Delete(ToDoItem toDoItem)
+        public int Delete(ShopItems shopItem)
         {
             int num;
-            num = database.Delete<ToDoItem>(toDoItem.Id);
+            num = database.Delete<ShopItems>(shopItem.Id);
             database.Commit();
             return num;
         }
 
-        public List<ToDoItem> GetAllToDoItems()
+        public List<ShopItems> GetAllShopItems()
         {
-            return database.Table<ToDoItem>().ToList();
+            return database.Table<ShopItems>().ToList();
         }
 
-        public ToDoItem GetToDoItem(int key)
+        public ShopItems GetShopItem(int key)
         {
-            return database.Table<ToDoItem>().Where(x => x.Id == key).FirstOrDefault();
+            return database.Table<ShopItems>().Where(x => x.Id == key).FirstOrDefault();
         }
 
     }

@@ -15,6 +15,7 @@ namespace SqliteTutorial
         public AddItem()
         {
             InitializeComponent();
+            BindingContext = new MainViewModel();
         }
 
         void uploadItem(object sender, System.EventArgs e)

@@ -11,21 +11,24 @@ namespace SqliteTutorial.Core.ViewModels
 {
     public class SecondViewModel : ViewModelBase
     {
-        private readonly MyDatabase db;
-        private ObservableCollection<ToDoItem> toDoItems;
+        private readonly MyDatabase _connect_db;
+        private ObservableCollection<ShopItems> shopItems;
 
-        public ObservableCollection<ToDoItem> ToDoItems
+        public ObservableCollection<ShopItems> ShopItems
         {
-            get { return toDoItems; }
-            set { toDoItems = value;
+            get { return shopItems; }
+            set
+            {
+                shopItems = value;
                 OnPropertyChanged();
             }
         }
 
         public SecondViewModel()
         {
-            db = new MyDatabase();
-            ToDoItems = new ObservableCollection<ToDoItem>(db.GetAllToDoItems());
+            _connect_db = new MyDatabase();
+            ShopItems = new ObservableCollection<ShopItems>(_connect_db.GetAllShopItems());
         }
     }
 }
+

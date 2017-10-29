@@ -7,7 +7,7 @@
             <Label Text = "My list"/>
         </StackLayout>
     
-    <ListView x:Name="listView" SeparatorVisibility="None" HasUnevenRows="true" >
+    <ListView x:Name="listView" ItemsSource="{Binding ShopItems}" SeparatorVisibility="None" HasUnevenRows="true" >
         
        <ListView.ItemTemplate>
             <DataTemplate>
@@ -18,7 +18,7 @@
                     
                     
                         <StackLayout HorizontalOptions="StartAndExpand" Spacing="45">
-                            <Label Text = "{Binding Name}"/>
+                            <Label Text = "{Binding Title}"/>
                             <Label Text = "{Binding Price}"/>
                         </StackLayout>
                     </StackLayout>

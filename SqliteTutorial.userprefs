@@ -1,6 +1,13 @@
 ﻿<Properties StartupConfiguration="{65656CE4-CC87-4C89-9975-1CDB92C9B6ED}|Default">
   <MonoDevelop.Ide.ItemProperties.SqliteTutorial.Android PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SqliteTutorial/SqliteTutorial/MainPage.xaml">
+    <Files>
+      <File FileName="SqliteTutorial/SqliteTutorial/Views/AddItem.xaml" Line="41" Column="15" />
+      <File FileName="SqliteTutorial/SqliteTutorial/ViewModels/AddItem.xaml.cs" Line="18" Column="47" />
+      <File FileName="SqliteTutorial.Core/ViewModels/MainViewModel.cs" Line="15" Column="31" />
+      <File FileName="SqliteTutorial/SqliteTutorial/MainPage.xaml" Line="41" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -25,9 +25,9 @@ namespace SqliteTutorial.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            INavigationService navService = new NavigationService();
+           
 
-            navService.RegisterViewModels(typeof(MainPage).Assembly);
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -27,7 +27,7 @@ namespace SqliteTutorial.Core.ViewModels
         public UsersList()
         {
             _connect_db = new MyDatabase();
-            ShopItems = new ObservableCollection<ShopItems>((System.Collections.Generic.IEnumerable<SqliteTutorial.Core.Models.ShopItems>)_connect_db.GetUserItems());
+            ShopItems = new ObservableCollection<ShopItems>(_connect_db.GetUserItems());
         }
     }
 }

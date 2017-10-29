@@ -30,6 +30,11 @@ namespace SqliteTutorial.Core.Database
 
         }
 
+        internal IEnumerable<ShopItems> GetUserItems()
+        {
+            throw new NotImplementedException();
+        }
+
         public int InsertOrUpdate(ShopItems shopItem)
         {
             int num;
@@ -55,12 +60,6 @@ namespace SqliteTutorial.Core.Database
             return database.Table<ShopItems>().ToList();
         }
 
-        public List<ShopItems> GetUserItems(bool s)
-        {
-
-
-            return database.Table<ShopItems>().ToList();
-        }
 
 
         public ShopItems GetShopItem(int key)

@@ -17,6 +17,8 @@ namespace SqliteTutorial.Core.Models
         public string Location { get; set; }
         public bool Mine { get; set; }
         public string Category { get; set; }
+        public double Long { get; set; }
+        public double Latit { get; set; }
 
 
     }

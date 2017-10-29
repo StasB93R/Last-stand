@@ -55,6 +55,14 @@ namespace SqliteTutorial.Core.Database
             return database.Table<ShopItems>().ToList();
         }
 
+        public List<ShopItems> GetUserItems(bool s)
+        {
+
+
+            return database.Table<ShopItems>().ToList();
+        }
+
+
         public ShopItems GetShopItem(int key)
         {
             return database.Table<ShopItems>().Where(x => x.Id == key).FirstOrDefault();

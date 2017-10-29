@@ -59,15 +59,6 @@ namespace SqliteTutorial.Core.ViewModels
             }
         }
         //this will be used when we add items to the users list
-        public bool Mine
-        {
-            get { return mine; }
-            set
-            {
-                mine = value;
-                OnPropertyChanged();
-            }
-        }
 
         //For category of the item
 
@@ -104,7 +95,7 @@ namespace SqliteTutorial.Core.ViewModels
                 Title = this.Title,
                 Price = this.Price,
                 Location = this.Location,
-                Mine = this.Mine,
+                Mine = true,
                 Category = this.Category
             });
             Title = String.Empty;

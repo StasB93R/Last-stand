@@ -27,7 +27,7 @@ namespace SqliteTutorial
         protected override void OnAppearing()
         {
 
-            BindingContext = new SecondViewModel();
+            BindingContext = new UsersList();
             base.OnAppearing();
         }
     }

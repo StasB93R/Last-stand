@@ -6,7 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+
 using SqliteTutorial.Core.Models;
+
 namespace SqliteTutorial
 {
     public partial class Search : ContentPage
@@ -48,6 +50,8 @@ namespace SqliteTutorial
 
                 new ShopItems { Title = "Adidas", Price = 40, Location = "dont know",
                                 Mine = false, Category = "Clothing", Long = 27.5030, Latit = 153.1016  },
+
+
             };
 
 

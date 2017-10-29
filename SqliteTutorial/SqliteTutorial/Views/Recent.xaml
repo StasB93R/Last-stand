@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SqliteTutorial.Recent">
+ <StackLayout Spacing="10">
+        <StackLayout HorizontalOptions="Center" VerticalOptions ="Center"  Padding="0,40, 0, 40">
+            <Label Text = "Recent searches"/>
+        </StackLayout>
+    
+    <ListView x:Name="listRecent" SeparatorVisibility="None" HasUnevenRows="true" >
+        
+       <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                        
+                     <StackLayout Orientation="Horizontal" Padding="10">
+                         <Image Source = "{Binding ImageUrl}" WidthRequest="100" HeightRequest="100" />
+                    
+                    
+                        <StackLayout HorizontalOptions="StartAndExpand" Spacing="10">
+                            <Label Text = "{Binding Name}"/>
+                            <Label Text = "{Binding Price}"/>
+                                <Label Text = "{Binding Location}"/>
+                        </StackLayout>
+                    </StackLayout>
+                        
+                 </ViewCell>
+            </DataTemplate>
+
+       </ListView.ItemTemplate>
+        </ListView>
+
+        </StackLayout>
+    
+</ContentPage>

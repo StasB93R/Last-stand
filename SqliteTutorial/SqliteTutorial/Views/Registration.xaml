@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    Padding = "0, 20, 0, 0"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SqliteTutorial.Registration">
+    <StackLayout VerticalOptions = "Center" Spacing ="10" Padding="30">
+    <Image x:Name="image" Aspect="AspectFit" HorizontalOptions="Center"
+        VerticalOptions="Center"/>  
+
+        
+        <StackLayout Orientation="Horizontal">
+        <Label Text="Username:"/>
+        <Entry x:Name = "username" Placeholder="Enter your username..." HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+        <Label Text="Email:"/>
+        <Entry x:Name="email" Placeholder="Enter your email..." HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+        <Label Text = "Password:"/>
+        <Entry x:Name="password" Placeholder="Enter your password..." HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+        <Label Text = "Confirm password:"/>
+        <Entry x:Name="confirmation" Placeholder="Password..." HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+       <Label Text="Already have an account?"/> <Label x:Name= "goLogin" Text="Login" TextColor="Aqua"/>
+        </StackLayout>
+
+        <Button Text="Register" Clicked="registerUser"/>
+
+
+    </StackLayout>
+</ContentPage>

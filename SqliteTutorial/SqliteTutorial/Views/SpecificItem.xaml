@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage Padding= "0,40,0,0" 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+ 
+    x:Class="SqliteTutorial.SpecificItem">
+    <StackLayout>
+        
+    <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+         <Image x:Name="product" Aspect="AspectFit" /> 
+        </StackLayout>
+      
+        <StackLayout VerticalOptions = "StartAndExpand" Padding="50, 20, 0, 0">
+            <Label Text="Nike"/>
+            <Label Text="50$"/>
+            <Label Text="Category: Clothing"/>
+            <Label Text="Location"/>
+
+         
+        </StackLayout>
+        <Button Text="Edit"/>
+
+
+    </StackLayout>
+      
+
+
+
+      
+
+    
+</ContentPage>

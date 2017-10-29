@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+   
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    Padding="0,20,0,0" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="SqliteTutorial.Search">
+    
+        <StackLayout>
+
+        <SearchBar Placeholder="Search" TextChanged="Handle_TextChanged"/>
+        <StackLayout Orientation ="Horizontal" Spacing = "20">
+             <Label Text="Price from"/>
+            <Entry x:Name="priceFrom" WidthRequest="60"/>
+            <Label Text="to"/>
+            <Entry x:Name="priceTo" WidthRequest="60"/>
+
+         
+        </StackLayout>
+          <StackLayout Orientation ="Horizontal" Spacing="20">
+             <Label Text="Category"/>
+            <Entry x:Name = "category" WidthRequest="150"/>
+
+         
+        </StackLayout>
+         <StackLayout Orientation ="Horizontal" Spacing="20">
+             <Label Text="Location"/>
+            <Entry x:Name = "location" WidthRequest="150"/>
+
+        </StackLayout>
+         
+   <StackLayout>
+       <ListView x:Name="listSearch" SeparatorVisibility="None" HasUnevenRows="true" >
+        
+       <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                        
+                     <StackLayout Orientation="Horizontal" Padding="10">
+                         <Image Source = "{Binding ImageUrl}" WidthRequest="100" HeightRequest="100" />
+                    
+                    
+                        <StackLayout HorizontalOptions="StartAndExpand" Spacing="10">
+                            <Label Text = "{Binding Name}"/>
+                            <Label Text = "{Binding Price}"/>
+                            <Label Text = "{Binding Location}"/>
+                        </StackLayout>
+                    </StackLayout>
+                        
+                 </ViewCell>
+            </DataTemplate>
+
+       </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>

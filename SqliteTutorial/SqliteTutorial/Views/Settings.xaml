@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SqliteTutorial.Settings">
+<StackLayout  Spacing ="10" Padding="30,50,30,30">
+        <Label  HorizontalOptions = "Center" Text = "Settings" />
+        
+    
+
+        <StackLayout Padding ="0,50, 0, 25" Spacing ="30">
+        <StackLayout Orientation="Horizontal">
+        <Label Text="Name:"/> <Label Text="Trivas"/>
+
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions ="Start">
+        <Label Text="Last name"/> <Label Text="Trimal"/>
+
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" HorizontalOptions ="Start">
+        <Label Text="Email:"/> <Label Text="qwerty@hotmail.com"/>
+
+        </StackLayout>
+            <Button Text="Edit" />
+
+        </StackLayout>
+       
+
+        <Button Text="IMPORT DATA" />
+        <Button Text="EXPORT DATA" />
+        <Button Text = "Sign out" Clicked="Handle_Clicked"/>
+
+
+    </StackLayout>
+</ContentPage>

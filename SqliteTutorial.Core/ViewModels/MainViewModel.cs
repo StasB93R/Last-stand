@@ -83,6 +83,7 @@ namespace SqliteTutorial.Core.ViewModels
 
         //This is used when submitting the to DB
         public ICommand SubmitCommand { protected set; get; }
+       
 
         public ICommand SecondPageCommand { protected set; get; }
 
@@ -90,6 +91,7 @@ namespace SqliteTutorial.Core.ViewModels
         {
             _connect_db = new MyDatabase();
             SubmitCommand = new Command(Submit);
+
             SecondPageCommand = new Command(() =>
             {
             });
@@ -106,8 +108,11 @@ namespace SqliteTutorial.Core.ViewModels
                 Category = this.Category
             });
             Title = String.Empty;
+
+           
            
         }
+       
     }
 }
 //var nameValue = productName.Text;

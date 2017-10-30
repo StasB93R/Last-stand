@@ -36,19 +36,19 @@ namespace SqliteTutorial
             listSearch.ItemsSource = new List<ShopItems>
             {
                 
-                new ShopItems { Title = "Adidas", Price = 40, Location = "dont know",
+                new ShopItems { Id = 1, Title = "Adidas", Price = 40, Location = "dont know",
                     Mine = false, Category = "Clothing", Long = 27.5030, Latit = 153.1016  },
 
-                new ShopItems { Title = "Nike", Price = 40, Location = "dont know",
+                new ShopItems { Id = 2, Title = "Nike", Price = 40, Location = "dont know",
                     Mine = false, Category = "Clothing", Long = 27.3847, Latit = 153.0321  },
 
-                new ShopItems { Title = "Baran", Price = 40, Location = "dont know",
+                new ShopItems { Id = 3, Title = "Baran", Price = 40, Location = "dont know",
                                 Mine = false, Category = "Clothing", Long = 27.4996, Latit = 152.9762  },
 
-                new ShopItems { Title = "Ishak", Price = 40, Location = "dont know",
+                new ShopItems { Id = 4, Title = "Ishak", Price = 40, Location = "dont know",
                                 Mine = false, Category = "Clothing", Long = 27.5630, Latit = 153.0825  },
 
-                new ShopItems { Title = "Adidas", Price = 40, Location = "dont know",
+                new ShopItems { Id = 5, Title = "Adidas", Price = 40, Location = "dont know",
                                 Mine = false, Category = "Clothing", Long = 27.5030, Latit = 153.1016  },
 
 
@@ -58,6 +58,11 @@ namespace SqliteTutorial
     
 
             base.OnAppearing();
+        }
+
+        void ViewItem(object sender, EventArgs e) {
+            var button = ((Button)sender);
+            Navigation.PushModalAsync(new SpecificItem((int)button.CommandParameter));
         }
 
     }

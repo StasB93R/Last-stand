@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SqliteTutorial.EditItem">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" Padding="30">
+            <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+                <Image x:Name="itemImage" Aspect="AspectFit" />
+            </StackLayout>
+
+            <StackLayout VerticalOptions = "StartAndExpand" Padding="10, 10, 10, 10">
+                <Label Text="Name: "/>
+                <Entry x:Name="itemName"/>
+                <Label Text="Price: "/>
+                <Entry x:Name="itemPrice"/>
+                <Label Text="Category: "/>
+                <Entry x:Name="itemCategory"/>
+                <Label Text="Availability: "/>
+                <Entry x:Name="itemAvailability"/>
+                <Label Text="Discount: "/>
+                <Entry x:Name="itemDiscount"/>
+                <Label Text="Description: "/>
+                <Entry x:Name="itemDescription"/>
+                <Label Text="Address: "/>
+                <Entry x:Name="itemAddress"/>
+                <Label Text="Location (Lat, Lng): "/>
+                <Entry x:Name="itemLat"/>
+                <Entry x:Name="itemLng"/>
+            </StackLayout>
+            <Button Text="Save" Clicked="UpdateItem"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

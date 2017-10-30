@@ -13,7 +13,7 @@ namespace SqliteTutorial
         {
             InitializeComponent();
 
-            MainPage = new Login();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

@@ -4,29 +4,34 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
  
     x:Class="SqliteTutorial.SpecificItem">
-    <StackLayout>
-        
-    <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
-         <Image x:Name="product" Aspect="AspectFit" /> 
+    <StackLayout VerticalOptions="StartAndExpand" Padding="30">
+        <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
+            <Image x:Name="itemImage" Aspect="AspectFit" />
         </StackLayout>
-      
-        <StackLayout VerticalOptions = "StartAndExpand" Padding="50, 20, 0, 0">
-            <Label Text="Nike"/>
-            <Label Text="50$"/>
-            <Label Text="Category: Clothing"/>
-            <Label Text="Location"/>
 
-         
+        <StackLayout VerticalOptions = "StartAndExpand" Padding="10, 10, 10, 10">
+            <Label x:Name="itemName"/>
+            <Label x:Name="itemPrice"/>
+            <Label Text="Category: "/>
+            <Label x:Name="itemCategory"/>
+            <Label x:Name="itemAvailability"/>
+            <Label x:Name="itemDiscount"/>
+            <Label x:Name="itemDescription"/>
+            <Label x:Name="itemAddress"/>
         </StackLayout>
-        <Button Text="Edit"/>
 
-
+        <!--<maps:Map WidthRequest="320" HeightRequest="200"
+            x:Name="map"
+            IsShowingUser="true"
+            MapType="Street"
+        />-->
+        <Button Text="Edit" Clicked="EditItem"/>
     </StackLayout>
-      
 
 
 
-      
 
-    
+
+
+
 </ContentPage>

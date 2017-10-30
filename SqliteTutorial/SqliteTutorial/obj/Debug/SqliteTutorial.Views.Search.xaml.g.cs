@@ -11,8 +11,8 @@
 namespace SqliteTutorial {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/stanislavberezin/Desktop/TEST/SqliteTutorial/SqliteTutorial/SqliteTutorial" +
-        "/Views/Search.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\KIARA\\Documents\\- Uni\\IAB330\\Last-stand\\SqliteTutorial\\SqliteTutorial\\Vi" +
+        "ews\\Search.xaml")]
     public partial class Search : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

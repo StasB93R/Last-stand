@@ -14,7 +14,7 @@ namespace SqliteTutorial
 {
     public partial class Search : ContentPage
     {
-        static ObservableCollection<ShopItems> shopList = new ObservableCollection<ShopItems>();
+        public static ObservableCollection<ShopItems> shopList = new ObservableCollection<ShopItems>();
 
         public Search()
         {
@@ -57,10 +57,6 @@ namespace SqliteTutorial
 
 
             base.OnAppearing();
-        }
-
-        public static ObservableCollection<ShopItems> getShopItems() {
-            return shopList;
         }
 
         void ViewItem(object sender, EventArgs e) {

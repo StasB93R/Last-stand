@@ -28,7 +28,6 @@ namespace SqliteTutorial.Droid
 		{
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.ApplicationName = global::SqliteTutorial.Droid.Resource.String.ApplicationName;
 			global::SQLite.Net.Platform.XamarinAndroid.Resource.String.Hello = global::SqliteTutorial.Droid.Resource.String.Hello;
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::SqliteTutorial.Droid.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation

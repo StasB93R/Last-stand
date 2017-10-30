@@ -19,7 +19,7 @@ namespace SqliteTutorial
         {
             InitializeComponent();
 
-            item = Search.getShopItems().First(shopitem => shopitem.Id == id);
+            item = Search.shopList.First(shopitem => shopitem.Id == id);
             itemImage = new Image(); //item.Img
             itemName.Text = item.Title;
             itemAddress.Text = item.Address;

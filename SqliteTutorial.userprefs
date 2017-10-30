@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{65656CE4-CC87-4C89-9975-1CDB92C9B6ED}|Default">
   <MonoDevelop.Ide.ItemProperties.SqliteTutorial.Android PreferredExecutionTarget="Android.Android_Accelerated_x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SqliteTutorial.Core/ViewModels/MainViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SqliteTutorial/SqliteTutorial/Views/Search.xaml">
     <Files>
-      <File FileName="SqliteTutorial/SqliteTutorial/ViewModels/Search.xaml.cs" Line="11" Column="1" />
-      <File FileName="SqliteTutorial/SqliteTutorial/Views/Search.xaml" Line="44" Column="58" />
-      <File FileName="SqliteTutorial/SqliteTutorial/ViewModels/AddItem.xaml.cs" Line="30" Column="1" />
-      <File FileName="SqliteTutorial/SqliteTutorial/Views/AddItem.xaml" Line="41" Column="15" />
-      <File FileName="SqliteTutorial.Core/ViewModels/MainViewModel.cs" Line="24" Column="18" />
+      <File FileName="SqliteTutorial.Core/ViewModels/SecondViewModel.cs" Line="35" Column="1" />
+      <File FileName="SqliteTutorial.Core/Database/Database.cs" Line="72" Column="1" />
+      <File FileName="SqliteTutorial/SqliteTutorial/ViewModels/Search.xaml.cs" Line="27" Column="47" />
+      <File FileName="SqliteTutorial.Core/ViewModels/MainViewModel.cs" Line="83" Column="49" />
+      <File FileName="SqliteTutorial/SqliteTutorial/Views/MyList.xaml" Line="10" Column="66" />
+      <File FileName="SqliteTutorial/SqliteTutorial/Views/Search.xaml" Line="58" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -18,7 +18,7 @@ namespace SqliteTutorial.Core.Database
         public MyDatabase()
         {
             database = new SQLiteConnection(DependencyService.Get<ISQLitePlatform>(), 
-                DependencyService.Get<IFileHelper>().GetLocalPath("ShopItemsDB1.db3"));
+            DependencyService.Get<IFileHelper>().GetLocalPath("ShopItemsDB1.db3"));
             database.CreateTable<ShopItems>();
         }
 

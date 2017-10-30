@@ -74,14 +74,13 @@ namespace SqliteTutorial.Core.ViewModels
         //This is used when submitting the to DB
         public ICommand SubmitCommand { protected set; get; }
        
-
+        public ICommand GoSpecific { protected set; get; }
         public ICommand SecondPageCommand { protected set; get; }
 
         public MainViewModel()
         {
             _connect_db = new MyDatabase();
             SubmitCommand = new Command(Submit);
-
             SecondPageCommand = new Command(() =>
             {
             });

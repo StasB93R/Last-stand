@@ -27,12 +27,12 @@ namespace SqliteTutorial
             var locationValue = location.Text;
             var categoryValue = category.Text;
 
-            throw new NotImplementedException();
+           
         }
 
         protected override void OnAppearing()
         {
-
+             
             listSearch.ItemsSource = new List<ShopItems>
             {
                 

@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="SqliteTutorial.AddItem">
-    <StackLayout VerticalOptions ="Start" Spacing ="10" Padding="25, 50, 25, 25">
-    <StackLayout Orientation="Horizontal">
-        <Label Text="Name:"/>
-        <Entry x:Name = "productName"  Text="{Binding Title}" Placeholder="Product name..." HorizontalOptions="FillAndExpand"/>
+    <StackLayout VerticalOptions ="Start" Spacing ="10" Padding="25, 50, 25, 0">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Name:"/>
+            <Entry x:Name = "productName"  Text="{Binding Title}" Placeholder="Product name..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
-        <Label Text = "Price"/>
-        <Entry x:Name = "productPrice"   Text="{Binding Price}" Placeholder="Price..." HorizontalOptions="FillAndExpand"/>
+            <Label Text = "Price"/>
+            <Entry x:Name = "productPrice"   Text="{Binding Price}" Placeholder="Price..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
 
         <StackLayout Orientation="Horizontal">
-         <Label Text = "Location"/>
-        <Entry x:Name = "productLocation" Text="{Binding Location}" Placeholder="Location..." HorizontalOptions="FillAndExpand"/>
+            <Label Text = "Location"/>
+            <Entry x:Name = "productLocation" Text="{Binding Location}" Placeholder="Location..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
-         <Label Text = "Category"/>
-        <Entry x:Name = "productCategory" Text="{Binding Category}" Placeholder="Category..." HorizontalOptions="FillAndExpand"/>
+            <Label Text = "Category"/>
+            <Entry x:Name = "productCategory" Text="{Binding Category}" Placeholder="Category..." HorizontalOptions="FillAndExpand"/>
         </StackLayout>
+        <Label Text = "Image"/>
+        <Image x:Name="upload" Aspect="AspectFit" HeightRequest="90" WidthRequest="150"/>
+       
+        <StackLayout Orientation="Horizontal" Padding="0, 50,0,0" HorizontalOptions="FillAndExpand">
 
 
-        <StackLayout Orientation="Horizontal" Padding="0, 50,0,0">
-         <Label Text = "Image"/>
-        <Image x:Name="upload" Aspect="AspectFit"/>  
-        <Button Text="Chose image" Clicked="upload_Image"/>
+            <Button x:Name="takePhoto" Text="Take Photo" />
+            <Button x:Name="pickPhoto" Text="Pick Photo" />
         </StackLayout>
-
-        <StackLayout VerticalOptions = "Center" HorizontalOptions = "Center" Padding="0,50,0,0"> 
-        <Button Text="Upload item" x:Name="SubmitButton" AutomationId="SubmitButton" Clicked="uploadItem" Command="{Binding SubmitCommand}" BorderColor="Aqua" />
+        <ScrollView>
+            <StackLayout VerticalOptions = "Center" HorizontalOptions = "Center" Padding="0,0,0,0">
+            <Button Text="Upload item" x:Name="SubmitButton" AutomationId="SubmitButton" Clicked="uploadItem" Command="{Binding SubmitCommand}" BorderColor="Aqua" />
         </StackLayout>
-
+        </ScrollView>
 
 
 

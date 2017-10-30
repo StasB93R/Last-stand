@@ -22,6 +22,7 @@ namespace SqliteTutorial.Core.ViewModels
         private int price;
         private string location;
         private string category;
+        
 
         //establishing getters and setters for information we are going to recieve
 

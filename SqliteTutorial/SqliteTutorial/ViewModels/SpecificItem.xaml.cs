@@ -6,27 +6,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using SqliteTutorial.Core.Models;
 
 
 namespace SqliteTutorial
 {
     public partial class SpecificItem : ContentPage
     {
-        int itemId;
+        ShopItems item;
+
         public SpecificItem(int id)
         {
             InitializeComponent();
 
-            itemId = id;
-            itemImage = new Image();
-            //Position itemLocation = new Position(-27.477356, 153.0284231);
-            itemName.Text = "Book";
-            itemAddress.Text = "QUT Gardens Point Campus, 2 George St";
-            itemCategory.Text = "Books";
-            itemAvailability.Text = "In Stock";
-            itemDiscount.Text = "10% off";
-            itemDescription.Text = "";
-            itemPrice.Text = "$10.00";
+            //Position itemLocation = new Position(item.Lat, item.Lng);
+            item = Search.getShopItems().First(shopitem => shopitem.Id == id);
+            itemImage = new Image(); //item.Img
+            itemName.Text = item.Title;
+            itemAddress.Text = item.Address;
+            itemCategory.Text = item.Category;
+            itemAvailability.Text = item.Availability;
+            itemDiscount.Text = item.Discount;
+            itemDescription.Text = item.Description;
+            itemPrice.Text = item.Price.ToString();
+
             /*
             map.MoveToRegion(
                 MapSpan.FromCenterAndRadius(
@@ -45,7 +48,7 @@ namespace SqliteTutorial
 
         void EditItem(object sender, System.EventArgs e)
         {
-            Navigation.PushModalAsync(new EditItem(itemId));
+            Navigation.PushModalAsync(new EditItem(item.Id));
         }
     }
 }

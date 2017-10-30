@@ -8,14 +8,34 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 
 using SqliteTutorial.Core.Models;
+using System.Collections.ObjectModel;
 
 namespace SqliteTutorial
 {
     public partial class Search : ContentPage
     {
+        static ObservableCollection<ShopItems> shopList = new ObservableCollection<ShopItems>();
+
         public Search()
         {
             InitializeComponent();
+
+            shopList.Add(new ShopItems { Id = 1, Title = "Adidas", Price = 40, Location = "dont know",
+                    Mine = false, Category = "Clothing", Lng = 27.5030, Lat = 153.1016  });
+
+
+            shopList.Add(new ShopItems { Id = 2, Title = "Nike", Price = 40, Location = "dont know",
+                    Mine = false, Category = "Clothing", Lng = 27.3847, Lat = 153.0321  });
+
+            shopList.Add(new ShopItems { Id = 3, Title = "Baran", Price = 40, Location = "dont know",
+                                Mine = false, Category = "Clothing", Lng = 27.4996, Lat = 152.9762  });
+
+            shopList.Add(new ShopItems { Id = 4, Title = "Ishak", Price = 40, Location = "dont know",
+                                Mine = false, Category = "Clothing", Lng = 27.5630, Lat = 153.0825  });
+
+            shopList.Add(new ShopItems { Id = 5, Title = "Adidas", Price = 40, Location = "dont know",
+                                Mine = false, Category = "Clothing", Lng = 27.5030, Lat = 153.1016  });
+
         }
 
 
@@ -33,31 +53,14 @@ namespace SqliteTutorial
         protected override void OnAppearing()
         {
 
-            listSearch.ItemsSource = new List<ShopItems>
-            {
-                
-                new ShopItems { Id = 1, Title = "Adidas", Price = 40, Location = "dont know",
-                    Mine = false, Category = "Clothing", Long = 27.5030, Latit = 153.1016  },
+            listSearch.ItemsSource = shopList;
 
-                new ShopItems { Id = 2, Title = "Nike", Price = 40, Location = "dont know",
-                    Mine = false, Category = "Clothing", Long = 27.3847, Latit = 153.0321  },
-
-                new ShopItems { Id = 3, Title = "Baran", Price = 40, Location = "dont know",
-                                Mine = false, Category = "Clothing", Long = 27.4996, Latit = 152.9762  },
-
-                new ShopItems { Id = 4, Title = "Ishak", Price = 40, Location = "dont know",
-                                Mine = false, Category = "Clothing", Long = 27.5630, Latit = 153.0825  },
-
-                new ShopItems { Id = 5, Title = "Adidas", Price = 40, Location = "dont know",
-                                Mine = false, Category = "Clothing", Long = 27.5030, Latit = 153.1016  },
-
-
-            };
-
-
-    
 
             base.OnAppearing();
+        }
+
+        public static ObservableCollection<ShopItems> getShopItems() {
+            return shopList;
         }
 
         void ViewItem(object sender, EventArgs e) {

@@ -12,13 +12,18 @@ namespace SqliteTutorial.Core.Models
         [PrimaryKey]
         [AutoIncrement]
         public int Id { get; set; }
+        public string Img { get; set; }
         public string Title { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
         public string Location { get; set; }
+        public string Address { get; set; }
+        public string Description { get; set; }
         public bool Mine { get; set; }
         public string Category { get; set; }
-        public double Long { get; set; }
-        public double Latit { get; set; }
+        public string Availability { get; set; }
+        public string Discount { get; set; }
+        public double Lng { get; set; }
+        public double Lat { get; set; }
 
 
     }

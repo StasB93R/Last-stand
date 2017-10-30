@@ -2,7 +2,7 @@
 <ContentPage Padding= "0,40,0,0" 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
- 
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     x:Class="SqliteTutorial.SpecificItem">
     <StackLayout VerticalOptions="StartAndExpand" Padding="30">
         <StackLayout VerticalOptions="Start" HorizontalOptions="Center">
@@ -20,11 +20,11 @@
             <Label x:Name="itemAddress"/>
         </StackLayout>
 
-        <!--<maps:Map WidthRequest="320" HeightRequest="200"
+        <maps:Map WidthRequest="320" HeightRequest="200"
             x:Name="map"
             IsShowingUser="true"
             MapType="Street"
-        />-->
+        />
         <Button Text="Edit" Clicked="EditItem"/>
     </StackLayout>
 

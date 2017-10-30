@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using SqliteTutorial.Core.Models;
+using Xamarin.Forms.Maps;
 
 
 namespace SqliteTutorial
@@ -19,18 +20,19 @@ namespace SqliteTutorial
         {
             InitializeComponent();
 
-            //Position itemLocation = new Position(item.Lat, item.Lng);
+            
             item = Search.shopList.First(shopitem => shopitem.Id == id);
+            Position itemLocation = new Position(item.Lat, item.Lng);
             itemImage = new Image(); //item.Img
             itemName.Text = item.Title;
-            itemAddress.Text = item.Address;
+            itemAddress.Text = item.Location;
             itemCategory.Text = item.Category;
             itemAvailability.Text = item.Availability;
             itemDiscount.Text = item.Discount;
             itemDescription.Text = item.Description;
             itemPrice.Text = item.Price.ToString();
 
-            /*
+            
             map.MoveToRegion(
                 MapSpan.FromCenterAndRadius(
                     itemLocation, Distance.FromMiles(1)));
@@ -43,7 +45,7 @@ namespace SqliteTutorial
                 Address = itemAddress.Text
             };
             map.Pins.Add(pin);
-            */
+            
         }
 
         void EditItem(object sender, System.EventArgs e)

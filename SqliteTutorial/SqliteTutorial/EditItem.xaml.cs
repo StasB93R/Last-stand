@@ -24,16 +24,24 @@ namespace SqliteTutorial
             itemName.Text = item.Title;
             itemAddress.Text = item.Address;
             itemCategory.Text = item.Category;
-            itemAvailability.Text = item.Availability;
             itemDiscount.Text = item.Discount;
             itemDescription.Text = item.Description;
             itemPrice.Text = item.Price.ToString();
-            itemLat.Text = item.Lat.ToString();
-            itemLng.Text = item.Lng.ToString();
         }
 
         void UpdateItem(object sender, System.EventArgs e)
         {
+            Search.shopList.Remove(item);
+
+            item.Title = itemName.Text;
+            item.Address = itemAddress.Text;
+            item.Category = itemCategory.Text;
+            item.Discount = itemDiscount.Text;
+            item.Description = itemDescription.Text;
+            item.Price = Double.Parse(itemPrice.Text);
+            Search.shopList.Add(item);
+
+
             Navigation.PushModalAsync(new SpecificItem(item.Id));
         }
 
